@@ -1,0 +1,19 @@
+{
+  "name": "ev3-coding-companions",
+  "version": "0.0.1",
+  "description": "Interactive EV3 MakeCode and BrickCode companion tutorials",
+  "dependencies": {
+    "core": "*"
+  },
+  "files": [
+    "main.ts",
+    "README.md",
+    "lesson-01-first-drive.md",
+    "lesson-02-tank-turns.md",
+    "lesson-03-drive-square.md"
+  ],
+  "supportedTargets": [
+    "ev3"
+  ],
+  "preferredEditor": "tsprj"
+}
