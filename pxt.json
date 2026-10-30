@@ -1,19 +1,21 @@
 {
-  "name": "ev3-coding-companions",
-  "version": "0.0.1",
-  "description": "Interactive EV3 MakeCode and BrickCode companion tutorials",
-  "dependencies": {
-    "core": "*"
-  },
-  "files": [
-    "main.ts",
-    "README.md",
-    "lesson-01-first-drive.md",
-    "lesson-02-tank-turns.md",
-    "lesson-03-drive-square.md"
-  ],
-  "supportedTargets": [
-    "ev3"
-  ],
-  "preferredEditor": "tsprj"
+    "name": "ev3-coding-companions",
+    "description": "Open tutorials for LEGO EV3 using MakeCode and BrickCode",
+    "dependencies": {
+        "ev3": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "lesson-01-first-drive.md",
+        "lesson-02-tank-turns.md",
+        "lesson-03-drive-square.md"
+    ],
+    "preferredEditor": "blocksprj",
+    "yotta": {
+        "config": {
+            "PXT_GC_CHECKS": 1
+        }
+    }
 }
