@@ -15,7 +15,7 @@
         "tank-bot/lesson-01-first-drive.md",
         "tank-bot/lesson-02-tank-turns.md",
         "tank-bot/lesson-03-drive-square.md",
-        "tank-bot/lesson-04-escape-the-maze.md",
+        "tank-bot/lesson-04-escape-the-maze.md"
     ],
     "preferredEditor": "blocksprj",
     "yotta": {
