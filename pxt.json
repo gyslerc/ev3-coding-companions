@@ -15,7 +15,12 @@
         "tank-bot/lesson-01-first-drive.md",
         "tank-bot/lesson-02-tank-turns.md",
         "tank-bot/lesson-03-drive-square.md",
-        "tank-bot/lesson-04-escape-the-maze.md"
+        "tank-bot/lesson-04-red-yellow-light.md",
+        "tank-bot/lesson-05-follow-the-line.md",
+        "tank-bot/lesson-06-angry-dog.md",
+        "tank-bot/lesson-07-spooky-dark-tank.md",
+        "tank-bot/lesson-08-escape-the-maze.md",
+        "color-sorter/lesson-01-sort-one-at-a-time.md"
     ],
     "preferredEditor": "blocksprj",
     "yotta": {
