@@ -18,7 +18,16 @@ Point your ultrasonic sensor **straight ahead**, not toward a side wall. Connect
 
 ## Be a distance detective
 
-The ultrasonic sensor measures how far away an object is, in **centimeters**. In **Loops**, add `||loops:forever||`. In **Sensors**, find ultrasonic distance for **port 4**. In **Brick**, add `||brick:show value||`.
+The ultrasonic sensor measures how far away an object is, in **centimeters**.  We would like to display the distance in cm on line 1 of your screen. 
+<br>
+<br>
+From **Loops**, add a `||loops:forever||` block. 
+In **Brick**, add `||brick:show value||`. 
+In **Sensors**, find ultrasonic distance for **port 4**. 
+<br>
+You can store the distance measured in a variable by creating a new `||variables:Make|` called "distance".
+How frequently does the distance value get updated? We can set a `||loops:pause||` to slow down the frequency of update. 
+For now you can set it to 100ms. Think about how the update rate impacts your program?
 
 ```blocks
 forever(function () {
@@ -40,8 +49,11 @@ Why not wait until 5 cm? The robot needs room to stop and turn. Predict how a ch
 
 ## Add START and STOP buttons
 
-Create a variable named `exploring`, initially `false`. Pressing **UP** changes it to `true`. Pressing **DOWN** changes it to `false` and stops the motors.
-
+When Exploring, we would like to update the distance measurement and display it on the screen. 
+If we are stopped, we would like to stop moving the tank bot.
+<br>
+Create a variable named `exploring`, set initially to`false`. Pressing **UP** changes it to `true`. Pressing **DOWN** changes it to `false` and stops the motors.
+To stop the motors use  `||motors:stop:largeBC||`.
 ```blocks
 let exploring = false
 brick.buttonUp.onEvent(ButtonEvent.Pressed, function () {
@@ -70,7 +82,7 @@ Inside the `||loops:forever||` loop, use `||logic:if then else||`. Check `distan
 
 - If the sensor reads **0 or less**, stop; that reading may be invalid.
 - If the distance is **less than 25 cm**, stop.
-- Otherwise, drive both tracks at **20%**.
+- Otherwise, drive both tracks at **20%**. Use `||motors:Tank:motors:large||`
 
 ```blocks
 let exploring = false
@@ -104,7 +116,7 @@ forever(function () {
 
 ## Teach the Tank Bot to turn
 
-Stopping is useful, but explorers need another direction. When the obstacle is closer than **25 cm**, stop and spin right using the `||motors:tank||` block.
+Stopping is useful, but explorers need another direction. When the obstacle is closer than **25 cm**, stop and spin right using the `||motors:Tank:motors:largeBC||` block.
 
 Try **20** for the left track and **-20** for the right track, for **0.4 rotations**.
 
